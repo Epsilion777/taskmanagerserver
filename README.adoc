@@ -6,20 +6,20 @@
 
 Для запуска приложения и базы данных выполните следующие шаги:
 
-1. Установите Docker и Docker Compose.
+1) Установите Docker и Docker Compose.
 
-2. Запустите контейнеры Docker с помощью команды `docker-compose up`.
+2) Запустите контейнеры Docker с помощью команды `docker-compose up`.
 
-3. Установите переменную окружения DB_CONN со значением postgresql://postgres:postgres@localhost:5433/test?sslmode=disable
+3) Установите переменную окружения DB_CONN со значением postgresql://postgres:postgres@localhost:5433/test?sslmode=disable
 
-4. Примените миграции базы данных с помощью утилиты Migrate
+4) Примените миграции базы данных с помощью утилиты Migrate
 
 [source,shell]
 ----
 migrate -path ./schema -database 'postgres://postgres:123321@localhost:5433/test?sslmode=disable' up
 ----
 
-5. Запустите приложение, используя команду `go run cmd/taskmanagerserver/main.go`.
+5) Запустите приложение, используя команду `go run cmd/taskmanagerserver/main.go`.
 
 == API
 
