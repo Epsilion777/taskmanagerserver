@@ -14,9 +14,10 @@
 
 4. Примените миграции базы данных с помощью утилиты Migrate
 
-## [source,shell]
-
-## migrate -path ./schema -database 'postgres://postgres:123321@localhost:5433/test?sslmode=disable' up
+[source,shell]
+----
+migrate -path ./schema -database 'postgres://postgres:123321@localhost:5433/test?sslmode=disable' up
+----
 
 5. Запустите приложение, используя команду `go run cmd/taskmanagerserver/main.go`.
 
